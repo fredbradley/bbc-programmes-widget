@@ -1,1 +1,44 @@
+.iplayer {
+	width:358px;
+	margin: auto;
+}
+.iplayer ul {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+.iplayer ul span.episode_title {
+	font-weight: bold;
+}
+.iplayer ul.span.episode_description {
+	clear: both;
+}
+.iplayer .flexslider .next {
+	float: right;
+}
+.iplayer .flexslider .prev {
+	float: left;
+}
+.spacer {
+	margin:5px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* = Image Slider
+/*-----------------------------------------------------------------------------------*/
+
+
+/* FlexSlider necessary styles */
+.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+.no-js .slides > li:first-child {display: block;}
+
 /* Stylesheet */

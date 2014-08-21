@@ -43,15 +43,16 @@ class BBCIPLAYER {
 			$episode = $decode->broadcasts{0};
 			
 		$key = $episode->service->id;
-		//112x36
-		$brandimage = "http://static.bbci.co.uk/programmes/2.54.3/img/logos/112x36/".$key.".png";
 
-		$image = "<div class=\"image_container\"><img src=\"http://ichef.bbci.co.uk/images/ic/256x144/legacy/episode/".$episode->programme->pid.".jpg?nodefault=true\" /></div>";
+		$brandimage = "http://static.bbci.co.uk/branding/1.5.0/img/logos/masterbrands/".$key.".png";
+		$programmeimage = "http://ichef.bbci.co.uk/images/ic/368x207/";
+		$image = "<div class=\"image_container\"><img src=\"".$programmeimage.$episode->programme->image->pid.".jpg\" /></div>";
 		$brandimage = "<div class=\"brandimage_container\"><img src=\"".$brandimage."\" /></div>";
 		$image = $image.$brandimage;		
 			
 		//	$html = "<h3 class=\"iplayer_header\">Next On ".$episode->service->title."</h3>";
 			$episodeid = $episode->programme->pid;
+			
 			$link = "http://www.bbc.co.uk/programmes/".$episodeid;
 			
 			//Check to see the programme is live now!
@@ -125,8 +126,7 @@ class BBCIPLAYER {
 				} else {
 					$link = "<a href=\"http://www.bbc.co.uk/programmes/".$episode->programme->pid."\">";
 				}	
-
-				$list .= "<li><span class=\"episode_title\">".$link.$episode->programme->title."</a></span><br /><span class=\"episode_description\">".$episode->programme->short_synopsis." <em>(".$availability.")</em></span></li>";
+				$list .= "<li><img src=\"http://ichef.bbci.co.uk/images/ic/368x207/".$episode->programme->image->pid.".jpg\" /><span class=\"episode_title\">".$link.$episode->programme->title."</a></span><br /><span class=\"episode_description\">".$episode->programme->short_synopsis." <em>(".$availability.")</em></span></li>";
 			}
 			$list .= "</ul></div>";
 	               
