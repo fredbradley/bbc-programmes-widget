@@ -42,7 +42,7 @@
 	<script type='text/javascript' src='js/jquery.flexslider-min.js?ver=3.5.1'></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">-->
 	<link rel="stylesheet" href="css/styles.css">
 	<title><?php echo $iplayer->getName($programme_id); ?>'s BBC Programmes widget!</title>
 </head>
