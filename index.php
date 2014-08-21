@@ -32,8 +32,10 @@
 	require_once(dirname(__FILE__)."/setup.php"); 
 	require_once(dirname(__FILE__)."/iplayer.class.php");
 	$iplayer = new BBCIPLAYER;
-	$programme_id = $_GET['id'];
-
+	$programme_id = $_GET['pid'];
+	if (!isset($_GET['pid'])) {
+		die("No Programme ID was set. Please set a programme using the key &quot;pid&quot; For example, &quot;?pid=b006wkt4&quot;");
+	}
 ?>
 <html>
 <head>
@@ -46,11 +48,8 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<title><?php echo $iplayer->getName($programme_id); ?>'s BBC Programmes widget!</title>
 </head>
-<body>
-
-<div class="container">
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
+	<body>
+		<div class="container">
 			<div class="iplayer">
 				<div class="iplayer_item">
 					<?php echo $iplayer->getUpcoming($programme_id); ?>
@@ -61,8 +60,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</body>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
 </html>

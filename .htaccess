@@ -1,0 +1,7 @@
+RewriteEngine On
+#RewriteBase /bbc-programmes-widget
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule programme/(.*)/$ /bbc-programmes-widget/index.php?pid=$1
+
+

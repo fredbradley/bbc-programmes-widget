@@ -1,14 +1,30 @@
 body {
+	font-family: Arial;
+	font-size:13px;
 	margin:0px;
 	padding:0px;
+}
+a {
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: bold;
 }
 .iplayer img {
 	max-width: 100%;
 	margin: auto;
+	height:auto;
+}
+.iplayer .brandimage_container {
+	height:0px;
+}
+.iplayer .brandimage_container > img {
+	position: relative;
+	top:-56px; /*15px;*/
+	z-index: 9;
 }
 .container {
-	background: aqua;
-	width: 100%;
+	padding:10px;
+	max-width: 368px;
 	margin: auto;
 }
 .iplayer ul {
