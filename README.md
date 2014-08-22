@@ -1,5 +1,8 @@
 bbc-programmes-widget
 =====================
+This is the dev branch. It may not work all the time! 
+
+I am currently adapting the widget to fit in with the BBC's GEL documentation
 
 A small widget to display a BBC Radio Programmes available iPlayer episodes
 
