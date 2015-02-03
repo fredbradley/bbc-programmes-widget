@@ -44,7 +44,7 @@ class BBCIPLAYER {
 			
 		$key = $episode->service->id;
 
-		$brandimage = "http://static.bbci.co.uk/branding/1.5.0/img/logos/masterbrands/".$key.".png";
+		$brandimage = "http://static.bbci.co.uk/branding/1.6.1/img/logos/masterbrands/".$key.".png";
 		$programmeimage = "http://ichef.bbci.co.uk/images/ic/368x207/";
 		$image = "<div class=\"image_container\"><img src=\"".$programmeimage.$episode->programme->image->pid.".jpg\" /></div>";
 		$brandimage = "<div class=\"brandimage_container\"><img src=\"".$brandimage."\" /></div>";
